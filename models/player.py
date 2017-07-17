@@ -1,26 +1,31 @@
-import json
+from __future__ import absolute_import
+
+from .socket_holder import SocketHolder
 
 
-def serialize(obj):
-    return json.dumps(obj).encode('utf-8')
+class Roles:
+
+    DOPPELGANGER = 0
+    DRUNK = 1
+    HUNTER = 2
+    INSOMNIAC = 3
+    MASON = 4
+    MINION = 5
+    ROBBER = 6
+    SEER = 7
+    TANNER = 8
+    TROUBLEMAKER = 9
+    VILLAGER = 10
+    WEREWOLF = 11
 
 
-class Player:
+class Player(SocketHolder):
 
-    def __init__(self, id, socket, is_creater=False):
-        self.id = id
-        self.socket = socket
+    def __init__(self, id, socket, role, is_creater=False):
+        super(Player, self).__init__(id, socket)
+
+        self.original_role = role
+        self.current_role = role
 
     def __eq__(self, other):
         return self.id == other.id
-
-    @property
-    def is_alive(self):
-        try:
-            self.socket.send(serialize({"type": "ack"}))
-            return True
-        except Exception:
-            return False
-
-    def send_ack(self):
-        self.socket.send(serialize({'type': 'ack'}))
