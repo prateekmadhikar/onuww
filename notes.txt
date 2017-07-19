@@ -1,0 +1,23 @@
+Things to do at start:
+    - Register with a user id
+
+Things to do when not in a game:
+    - List games
+    - Create game
+    - Join game as a player or spectator (reveal roles, but not participate)
+
+Things to do at game creation:
+    - Be able to send link to a game
+    - Chose characters to play with in game
+    - See character descriptions
+    - Start the game
+    - Leave game (delete room when empty)
+    - Configure timings (role times, voting times, etc)
+
+Things to do in game:
+    - See your inital assigned role and its action
+    - View game log
+    - Be alerted when its your role with description, keep track of what you did
+    - See status of game (which character is currently going)
+    - See all cards laid out with corresponding player names
+    - Be able to select cards if you need to and then confirm to do action
