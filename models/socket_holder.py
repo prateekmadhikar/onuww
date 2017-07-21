@@ -1,6 +1,6 @@
 from __future__ import absolute_import
 
-from ..utils import serialize
+from onuwwo.utils.json import serialize
 
 
 class SocketHolder:

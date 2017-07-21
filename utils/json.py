@@ -9,4 +9,5 @@ def deserialize(str):
     try:
         return json.loads(str.decode('utf-8'))
     except Exception:
+        # TODO: Raise actual exception fam
         return str

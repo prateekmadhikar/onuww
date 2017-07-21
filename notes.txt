@@ -35,7 +35,7 @@ Questions:
     - How does the server run multiple games at once?
         - Make the game creator be the game controller? Nah
         - Start a new thread for each room? Probs
-        -
     - How do you structure this code? I have an idea as to how to organize the API calls... not much more
-        - Where does the game controller live?
+        - Single socket URL that will be created for each new game??
     - Should the game controller by a state machine of some sort? I think it might be easier that way.
+    - HTTP required for everything not in game i think
