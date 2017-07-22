@@ -1,9 +1,8 @@
-class Room:
+class GameRoom:
 
-    def __init__(self, id, controller):
+    def __init__(self, id):
         self.id = id
         self.players = []
-        self.game_controller = controller
 
     @property
     def num_players(self):

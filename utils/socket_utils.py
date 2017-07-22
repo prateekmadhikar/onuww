@@ -1,4 +1,6 @@
-from onuwwo.utils.json import serialize
+from __future__ import absolute_import
+
+from .json_utils import serialize
 
 
 def get_socket_message(socket):

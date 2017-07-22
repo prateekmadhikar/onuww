@@ -1,6 +1,4 @@
-from __future__ import absolute_import
-
-from .socket_holder import SocketHolder
+from onuwwo.models.socket_holder import SocketHolder
 
 
 class Roles:
@@ -21,11 +19,13 @@ class Roles:
 
 class Player(SocketHolder):
 
-    def __init__(self, id, socket, role, is_creater=False):
+    def __init__(self, id, socket, role, is_creator=False):
         super(Player, self).__init__(id, socket)
 
-        self.original_role = role
-        self.current_role = role
+        self._current_role = role
+        self._original_role = role
+        self._id = id
+        self._is_creator = is_creator
 
     def __eq__(self, other):
         return self.id == other.id
