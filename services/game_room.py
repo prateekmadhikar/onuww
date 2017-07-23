@@ -8,8 +8,8 @@ class GameRoomService:
     def __init__(self):
         pass
 
-    def create_room(self, id, creator, password=None):
-        game_room = GameRoom(id)
+    def create_room(self, id, password=None):
+        game_room = GameRoom(id, password=password)
 
         self._rooms[id] = game_room
 
