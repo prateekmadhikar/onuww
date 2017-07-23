@@ -3,6 +3,7 @@ from __future__ import absolute_import
 from flask import Flask
 from flask_sockets import Sockets
 
+from routes.game_room import game_room_blueprint
 from routes.lobby import lobby_blueprint
 
 app = Flask(__name__)
@@ -11,7 +12,7 @@ socket = Sockets(app)
 
 # Register the different blueprints
 app.register_blueprint(lobby_blueprint)
-
+socket.register_blueprint(game_room_blueprint)
 
 @app.route('/', methods=['GET'])
 def hello_world():
