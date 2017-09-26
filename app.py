@@ -14,6 +14,7 @@ socket = Sockets(app)
 app.register_blueprint(lobby_blueprint)
 socket.register_blueprint(game_room_blueprint)
 
+
 @app.route('/', methods=['GET'])
 def hello_world():
     return 'Hello World', 200
